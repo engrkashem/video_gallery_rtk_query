@@ -29,7 +29,7 @@ export default function Video() {
     content = <Error message="Video not found" />;
 
   if (!isLoading && !isError && video?.id) {
-    const {title, link}=video;
+    const { title, link } = video || {};
     content = (
       <>
         <Player title={title} link={link} />
@@ -37,7 +37,6 @@ export default function Video() {
       </>
     );
   }
-
 
   return (
     <section className="pt-6 pb-20 min-h-[calc(100vh_-_157px)]">
