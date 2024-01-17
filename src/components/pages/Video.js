@@ -10,6 +10,13 @@ import RelatedVideoLoader from "../ui/loaders/RelatedVideoLoader";
 
 export default function Video() {
   const { videoId } = useParams();
+  // const {
+  //   data: video,
+  //   isLoading,
+  //   isError,
+  // } = useGetVideoQuery(videoId, {
+  //   refetchOnMountOrArgChange: 5,
+  // });
   const { data: video, isLoading, isError } = useGetVideoQuery(videoId);
 
   // decide what to render
